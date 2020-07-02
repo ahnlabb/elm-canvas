@@ -45,7 +45,7 @@ decodeTextureImage =
             (\image ->
                 D.map3
                     (\tagName width height ->
-                        if tagName == "IMG" then
+                        if tagName == "IMG" || tagName == "CANVAS" then
                             Just
                                 (TImage
                                     { json = image
